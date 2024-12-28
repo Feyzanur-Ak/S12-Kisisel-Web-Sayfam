@@ -2,10 +2,13 @@ import { useContext } from "react";
 import { GlobalContext } from "../context/GlobalContext";
 
 export default function MainPage() {
-  const { title, name, description} = useContext(GlobalContext);
+  const { title, name, description, theme} = useContext(GlobalContext);
+  const isDark = theme === 'dark'
 
   return (
-    <section className="max-w-7xl mx-auto px-8 py-14">
+    <section  className={`max-w-7xl mx-auto px-8 py-14 ${
+      isDark ? 'bg-gray-800 ' : 'bg-white'
+    }`}>
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8">
         <div className="md:w-1/2 space-y-10">
           <div className="flex items-center space-x-2">
