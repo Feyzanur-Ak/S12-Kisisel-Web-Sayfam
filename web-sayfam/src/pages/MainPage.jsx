@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { GlobalContext } from "../context/GlobalContext";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function MainPage() {
   const { title, name, description, theme} = useContext(GlobalContext);
@@ -15,20 +16,35 @@ export default function MainPage() {
             <div className="w-20 h-[1px] bg-purple-600 py"/>
             <p className="font-bold text-purple-600">{name}</p>
           </div>
-          <h1 className="text-5xl font-bold text-gray-900 mb-4 leading-tight">
+          <h1   className={`
+                text-5xl font-bold
+                ${isDark ? 'text-gray-300' : 'text-black'}
+              `} >
             {title}
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
+          <p  className={`
+                text-xl font-bold
+                ${isDark ? 'text-gray-300' : 'text-gray-500'}
+              `} >
             {description}
           </p>
           <div className="flex flex-wrap gap-6 mt-4">
-            <button className="px-5 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition">
+            <button className={`
+                    transition-colors px-4 py-2 rounded-md font-medium
+                    ${
+                      isDark
+                        ? "bg-white text-purple-600 hover:bg-gray-200"
+                        : "text-purple-600 border border-purple-600 hover:bg-purple-600 hover:text-white"
+                    }
+                  `}>
               Hire Me
             </button>
-            <button className="px-5 py-2 border border-purple-600 text-purple-600 rounded-md hover:bg-purple-50 transition">
+            <button  className="px-5 py-2 flex items-center space-x-2 gap-3 border border-purple-600 text-purple-600 rounded-md hover:bg-purple-50 transition" >
+            <FaGithub size={18} />
               Git Hub
             </button>
-            <button className="px-5 py-2 border border-purple-600 text-purple-600 rounded-md hover:bg-purple-50 transition">
+            <button className="px-5 py-2 flex items-center space-x-2 gap-3 border border-purple-600 text-purple-600 rounded-md hover:bg-purple-50 transition">
+            <FaLinkedin size={18} />
               Linkedln
             </button>
           </div>
