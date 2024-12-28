@@ -1,8 +1,9 @@
 import './App.css'
 import {BrowserRouter as Router,Route} from "react-router-dom";
-import Header from './components/Header';
 import { GlobalProvider } from './context/GlobalContext';
-import MainPage from './components/MainPage';
+import Header from './pages/Header';
+import MainPage from './pages/MainPage';
+
 function App() {
 
 

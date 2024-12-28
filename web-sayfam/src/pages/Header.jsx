@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { GlobalContext } from "../context/GlobalContext";
-import ThemeSwitcher from "../Switchers/ThemeSwitcher";
-import LanguageSwitcher from "../Switchers/LanguageSwitcher";
+import ThemeSwitcher from "../components/ThemeSwitcher";
+import LanguageSwitcher from "../components/LanguageSwitcher";
+
 
 
 export default function Header() {
