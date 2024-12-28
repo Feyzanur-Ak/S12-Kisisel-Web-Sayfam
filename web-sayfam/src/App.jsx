@@ -3,6 +3,7 @@ import {BrowserRouter as Router,Route} from "react-router-dom";
 import { GlobalProvider } from './context/GlobalContext';
 import Header from './pages/Header';
 import MainPage from './pages/MainPage';
+import Skills from './pages/Skills';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
  <Route exact path="/" component={Header} />
     </Router>
     <MainPage/>
+    <Skills/>
     </GlobalProvider>
      
     
