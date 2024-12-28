@@ -4,6 +4,8 @@ import { GlobalProvider } from './context/GlobalContext';
 import Header from './pages/Header';
 import MainPage from './pages/MainPage';
 import Skills from './pages/Skills';
+import Profile from './pages/Profile';
+import Projects from './pages/Projects';
 
 function App() {
 
@@ -16,6 +18,8 @@ function App() {
     </Router>
     <MainPage/>
     <Skills/>
+    <Profile/>
+    <Projects/>
     </GlobalProvider>
      
     

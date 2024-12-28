@@ -22,9 +22,11 @@ export const contentData = {
       },
     ],
     profile: {
-      birthDate: "18.12.1999",
-      education: "Kocaeli University, Master's, 2023",
-      role: "Frontend, UI Developer",
+      "Birth Date": "18.12.1999",
+      "Education": "Kocaeli University, Master's, 2023",
+      "Preferred Role": "Frontend, UI Developer",
+      aboutMe:
+        "Hi, I'm Feyzanur Ak. I'm a passionate front-end developer, creating user-friendly, visually engaging, and high-performing digital experiences.",
     },
     nav: {
       skills: "Skills",
@@ -55,9 +57,11 @@ export const contentData = {
       },
     ],
     profile: {
-      birthDate: "18.12.1999",
-      education: "Kocaeli Üniversitesi, Yüksek Lisans, 2023",
-      role: "Frontend, UI Geliştirici",
+      "Doğum Tarihi": "18.12.1999",
+      "Eğitim Durumu": "Kocaeli Üniversitesi, Yüksek Lisans, 2023",
+      "Tercih Ettiği Rol": "Frontend, UI Geliştirici",
+      aboutMe:
+      "Merhaba, ben Feyzanur Ak. Kullanıcı dostu, görsel olarak çekici ve yüksek performanslı dijital deneyimler oluşturan tutkulu bir ön yüz geliştiricisiyim.",
     },
     nav: {
       skills: "Yetenekler",
