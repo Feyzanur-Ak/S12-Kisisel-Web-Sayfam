@@ -10,6 +10,11 @@ export const contentData = {
         education: "Kocaeli University, Master's, 2023",
         role: "Frontend, UI Developer",
       },
+      nav: {
+        skills: "Skills",
+        projects: "Projects",
+        hireMe: "Hire me"
+      }
     },
     tr: {
         name:"Feyzanur Ak",
@@ -22,6 +27,11 @@ export const contentData = {
         education: "Kocaeli Üniversitesi, Yüksek Lisans, 2023",
         role: "Frontend, UI Geliştirici",
       },
+      nav: {
+        skills: "Yetenekler",
+        projects: "Projeler",
+        hireMe: "Beni İşe Al"
+      }
     },
   };
   

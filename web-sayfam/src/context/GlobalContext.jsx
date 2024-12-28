@@ -12,7 +12,7 @@ export const GlobalProvider = ({children}) => {
   const [theme, setTheme] = useLocalStorage('theme', 'light');
 
 
-  const { title, description, skills, profile, name} = contentData[language];
+  const { title, description, skills, profile, name, nav} = contentData[language];
   const projects = projectsData[language];
 
   const toggleLanguage = () => {
@@ -44,6 +44,7 @@ export const GlobalProvider = ({children}) => {
     profile,
     skills,
     projects,
+    nav,
     toggleLanguage,
     toggleTheme,
     getModeText
