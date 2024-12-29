@@ -1,5 +1,6 @@
 import pizzaImage from "../images/pizzawebsayfası.png";
 import witImage from "../images/witflix.png";
+import netImage from "../images/netflix.png";
 
 export const contentData = {
   en: {
@@ -91,6 +92,7 @@ export const projectsData = {
       description: "This project is a practical application of the theoretical knowledge I have gained about React at a fundamental level. It also serves as an example where I simulate data management between pages and create user interactions.",
       siteUrl: "https://pizzawebsitesi-s44q.vercel.app/",
       githubUrl:"https://github.com/Feyzanur-Ak/WitflixReact",
+      imageUrl:netImage,
       tags:["React","Axios","React-Router-Dom"],
     },
     {
@@ -119,6 +121,7 @@ export const projectsData = {
       description: "Bu proje, React ile edindiğim teorik bilgilerin temel düzeyde uygulamaya geçirildiği bir çalışmadır. Aynı zamanda, verinin sayfalar arası yönetimi ve kullanıcı etkileşimlerinin oluşturulmasını simüle ettiğim bir örnektir.",
       siteUrl: "https://randomjokes.com",
       githubUrl:"https://github.com/Feyzanur-Ak/WitflixReact",
+      imageUrl:netImage,
       tags:["React","Axios","React-Router-Dom"],
     },
     {
