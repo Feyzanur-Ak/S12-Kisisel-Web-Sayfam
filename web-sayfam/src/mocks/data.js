@@ -1,3 +1,5 @@
+
+
 export const contentData = {
   en: {
     name: "Feyzanur Ak",
@@ -75,41 +77,54 @@ export const projectsData = {
   en: [
     {
       id: 1,
-      title: "Netflix",
-      description: "A streaming platform for movies and series.",
-      url: "https://netflix.com",
+      title: "Witflix",
+      description: "Every great journey doesn't start at the top; every step is a story of progress. This application has been created to document and share my first steps, the challenges I faced, and the progress I've made along the way.",
+      siteUrl: "https://net-flix-uygulama.vercel.app/",
+      githubUrl:"https://github.com/Feyzanur-Ak/NetFlixUygulama",
+      tags:["Html","Css","JavaScript"]
     },
     {
       id: 2,
-      title: "Random Jokes",
-      description: "A fun app for random jokes.",
-      url: "https://randomjokes.com",
+      title: "Netflix Clone",
+      description: "This project is a practical application of the theoretical knowledge I have gained about React at a fundamental level. It also serves as an example where I simulate data management between pages and create user interactions.",
+      siteUrl: "https://pizzawebsitesi-s44q.vercel.app/",
+      githubUrl:"https://github.com/Feyzanur-Ak/WitflixReact",
+      tags:["React","Axios","React-Router-Dom"],
     },
     {
       id: 3,
-      title: "Journey",
-      description: "A travel planning app.",
-      url: "https://journey.com",
+      title: "Pizza Order Website",
+      description: "This project demonstrates the use of React Router DOM to enable data transfer between pages using the prop-drilling method and simulates an API source with axios. User selections are preserved across pages, representing a shopping environment experience.",
+      siteUrl: "https://pizzawebsitesi-s44q.vercel.app/",
+      githubUrl:"https://github.com/Feyzanur-Ak/pizzawebsitesi",
+      imgUrl:"../public/images/pizzawebsayfasi.png",
+      tags:["React","Redux","LocalStorage"],
     },
   ],
   tr: [
     {
       id: 1,
-      title: "Netflix",
-      description: "Film ve diziler için bir yayın platformu.",
-      url: "https://netflix.com",
+      title: "Witflix",
+      description: "Her büyük yolculuk en tepeden başlamaz; her adım bir ilerleme hikayesidir. Bu uygulama, attığım ilk adımları, karşılaştığım zorlukları ve gösterdiğim ilerlemeyi belgelemek ve paylaşmak için oluşturulmuştur",
+      siteUrl: "https://net-flix-uygulama.vercel.app/",
+      githubUrl:"https://github.com/Feyzanur-Ak/NetFlixUygulama",
+      tags:["Html","Css","JavaScript"]
     },
     {
       id: 2,
-      title: "Rastgele Şakalar",
-      description: "Rastgele şakalar için eğlenceli bir uygulama.",
-      url: "https://randomjokes.com",
+      title: "Netflix Kopyası",
+      description: "Bu proje, React ile edindiğim teorik bilgilerin temel düzeyde uygulamaya geçirildiği bir çalışmadır. Aynı zamanda, verinin sayfalar arası yönetimi ve kullanıcı etkileşimlerinin oluşturulmasını simüle ettiğim bir örnektir.",
+      siteUrl: "https://randomjokes.com",
+      githubUrl:"https://github.com/Feyzanur-Ak/WitflixReact",
+      tags:["React","Axios","React-Router-Dom"],
     },
     {
       id: 3,
-      title: "Yolculuk",
-      description: "Bir seyahat planlama uygulaması.",
-      url: "https://journey.com",
+      title: "Pizza Sipariş Websitesi",
+      description: "Bu proje, React Router DOM kullanılarak sayfalar arası veri geçişinin prop-drilling yöntemiyle sağlandığı ve axios ile bir API kaynağının simüle edildiği bir çalışmadır. Kullanıcı seçimleri sayfalar arasında korunarak, bir alışveriş ortamı deneyimi temsil edilmiştir.",
+      siteUrl: "https://pizzawebsitesi-s44q.vercel.app/",
+      githubUrl:"https://github.com/Feyzanur-Ak/pizzawebsitesi",
+      tags:["React","Redux","LocalStorage"],
     },
   ],
 }
