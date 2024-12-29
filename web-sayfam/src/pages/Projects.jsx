@@ -21,7 +21,7 @@ const Projects = () => {
             key={project.id}
             className="sm:w-1/2 lg:w-1/3 px-4 "
           >
-            <div className={`p-6  h-full rounded-md shadow-lg h-full${
+            <div className={`p-6  h-full rounded-md  h-full${
         isDark ? "bg-gray-800" : "bg-white"}`}>
               <img
                 src={project.imageUrl} 

@@ -1,4 +1,3 @@
-import './App.css'
 import {BrowserRouter as Router,Route} from "react-router-dom";
 import { GlobalProvider } from './context/GlobalContext';
 import Header from './pages/Header';
@@ -6,6 +5,7 @@ import MainPage from './pages/MainPage';
 import Skills from './pages/Skills';
 import Profile from './pages/Profile';
 import Projects from './pages/Projects';
+import Footer from "./pages/Footer";
 
 function App() {
 
@@ -20,6 +20,7 @@ function App() {
     <Skills/>
     <Profile/>
     <Projects/>
+    <Footer/>
     </GlobalProvider>
      
     
