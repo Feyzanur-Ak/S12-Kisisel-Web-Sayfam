@@ -6,10 +6,11 @@ const Projects = () => {
   const isDark = theme === "dark";
 
   return (
-    <div className={`max-w-7xl mx-auto px-8 py-10 ${
+    <div className={`w-screen  px-8 py-10 ${
         isDark ? "bg-gray-800" : "bg-white"}`}>
+          <div className="max-w-7xl mx-auto">
       <h1
-        className={`text-5xl font-bold mb-10 ${
+        className={`text-5xl font-bold mx-8 mb-10 ${
           isDark ? "text-gray-300" : "text-gray-900"
         }`}
       >
@@ -63,10 +64,12 @@ const Projects = () => {
                 >
                   View Site
                 </a>
+                
               </div>
             </div>
           </div>
         ))}
+      </div>
       </div>
     </div>
   );

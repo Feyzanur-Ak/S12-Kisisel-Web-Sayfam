@@ -7,12 +7,12 @@ const Footer = () => {
 
   return (
     <section
-      className={`max-w-7xl mx-auto px-8 py-10   ${
+      className={`w-screen px-8 py-10   ${
         isDark ? "bg-black text-white" : "bg-gray-100 text-gray-900"
       }`}
     >
-    
-      <div className="mb-16 w-2/3">
+<div className="max-w-7xl mx-auto">
+      <div className="  mb-16 w-2/3">
         <span className="text-3xl font-bold ">
           {language === "tr"
             ? "Birlikte çalışarak bir sonraki büyük fikrinizi hayata geçirelim."
@@ -60,6 +60,7 @@ const Footer = () => {
             Linkedin
           </a>
         </div>
+      </div>
       </div>
     </section>
   );
