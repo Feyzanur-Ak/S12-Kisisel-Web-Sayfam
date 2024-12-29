@@ -13,7 +13,7 @@ export default function Header() {
         isDark ? "bg-gray-800 text-white" : "bg-white text-black"
       } transition-colors overflow-hidden`}
     >
-      <div className="w-full">
+     
         <div className="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
           <div className="w-10 h-10 flex items-center justify-center rotate-6 rounded-full bg-purple-600 text-white text-lg font-bold">
             F
@@ -54,7 +54,7 @@ export default function Header() {
             </nav>
           </div>
         </div>
-      </div>
+    
     </header>
   );
 }

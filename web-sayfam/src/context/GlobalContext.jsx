@@ -28,9 +28,9 @@ export const GlobalProvider = ({children}) => {
  
   const getModeText = (lang, thm) => {
     if (lang === 'tr') {
-      return thm === 'dark' ? 'Karanlık Mod' : 'Aydınlık Mod';
+      return thm === 'dark' ? 'KARANLIK MOD' : 'AYDINLIK MOD';
     } else {
-      return thm === 'dark' ? 'Dark Mode' : 'Light Mode';
+      return thm === 'dark' ? 'DARK MODE' : 'LIGHT MODE';
     }
   };
 

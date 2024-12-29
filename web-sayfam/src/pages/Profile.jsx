@@ -14,7 +14,7 @@ const Profile = () => {
 
   return (
     <section
-      className={`w-screen px-8 py-10 flex flex-col items-center ${
+      className={`w-screen px-8  flex flex-col items-center ${
         isDark ? "bg-gray-800" : "bg-white"
       }`}
     >
@@ -55,7 +55,7 @@ const Profile = () => {
                 {profile[labels.birthDate]}
               </p>
             </div>
-            <div className="flex gap-16">
+            <div className="flex gap-12">
               <h3
                 className={`text-lg font-bold ${
                   isDark ? "text-gray-300" : "text-purple-600"
@@ -71,7 +71,7 @@ const Profile = () => {
                 {profile[labels.education]}
               </p>
             </div>
-            <div className="flex gap-8">
+            <div className="flex gap-12">
               <h3
                 className={`text-lg font-bold ${
                   isDark ? "text-gray-300" : "text-purple-600"
