@@ -12,7 +12,7 @@ const Footer = () => {
       }`}
     >
 <div className="max-w-7xl mx-auto">
-      <div className="  mb-16 w-2/3">
+      <div className="  mb-16 w-1/2">
         <span className="text-3xl font-bold ">
           {language === "tr"
             ? "Birlikte çalışarak bir sonraki büyük fikrinizi hayata geçirelim."

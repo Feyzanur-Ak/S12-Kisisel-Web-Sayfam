@@ -12,8 +12,8 @@ export default function MainPage() {
         isDark ? "bg-gray-800" : "bg-white"
       }`}
     >
-      <div className="max-w-7xl mx-80">
-        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8">
+      <div className="max-w-7xl mx-auto px-4 ">
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-4">
       
           <div className="md:w-1/2 space-y-10">
             <div className="flex items-center space-x-2">

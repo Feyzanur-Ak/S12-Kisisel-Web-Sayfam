@@ -3,6 +3,7 @@ import { createContext } from 'react';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { contentData, projectsData } from '../mocks/data';
 
+
 export const GlobalContext = createContext();
 
 // eslint-disable-next-line react/prop-types
