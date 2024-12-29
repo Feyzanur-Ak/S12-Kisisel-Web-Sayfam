@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <section
-      className={`w-screen px-8 py-10 mx-4  ${
+      className={`w-screen px-8 py-10  ${
         isDark ? "bg-black text-white" : "bg-gray-100 text-gray-900"
       }`}
     >

@@ -23,7 +23,7 @@ const Projects = () => {
             >
               <div
                 className={`flex flex-col p-6 h-full w-full rounded-md ${
-                  isDark ? "bg-gray-700" : "bg-white "
+                  isDark ? "bg-gray-800" : "bg-white "
                 }`}
               >
                 <img
