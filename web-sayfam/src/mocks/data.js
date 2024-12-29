@@ -1,4 +1,5 @@
-
+import pizzaImage from "../images/pizzawebsayfası.png";
+import witImage from "../images/witflix.png";
 
 export const contentData = {
   en: {
@@ -81,6 +82,7 @@ export const projectsData = {
       description: "Every great journey doesn't start at the top; every step is a story of progress. This application has been created to document and share my first steps, the challenges I faced, and the progress I've made along the way.",
       siteUrl: "https://net-flix-uygulama.vercel.app/",
       githubUrl:"https://github.com/Feyzanur-Ak/NetFlixUygulama",
+      imageUrl:witImage,
       tags:["Html","Css","JavaScript"]
     },
     {
@@ -97,7 +99,7 @@ export const projectsData = {
       description: "This project demonstrates the use of React Router DOM to enable data transfer between pages using the prop-drilling method and simulates an API source with axios. User selections are preserved across pages, representing a shopping environment experience.",
       siteUrl: "https://pizzawebsitesi-s44q.vercel.app/",
       githubUrl:"https://github.com/Feyzanur-Ak/pizzawebsitesi",
-      imgUrl:"../public/images/pizzawebsayfasi.png",
+      imageUrl: pizzaImage,
       tags:["React","Redux","LocalStorage"],
     },
   ],
@@ -108,6 +110,7 @@ export const projectsData = {
       description: "Her büyük yolculuk en tepeden başlamaz; her adım bir ilerleme hikayesidir. Bu uygulama, attığım ilk adımları, karşılaştığım zorlukları ve gösterdiğim ilerlemeyi belgelemek ve paylaşmak için oluşturulmuştur",
       siteUrl: "https://net-flix-uygulama.vercel.app/",
       githubUrl:"https://github.com/Feyzanur-Ak/NetFlixUygulama",
+      imageUrl:witImage,
       tags:["Html","Css","JavaScript"]
     },
     {
@@ -124,6 +127,7 @@ export const projectsData = {
       description: "Bu proje, React Router DOM kullanılarak sayfalar arası veri geçişinin prop-drilling yöntemiyle sağlandığı ve axios ile bir API kaynağının simüle edildiği bir çalışmadır. Kullanıcı seçimleri sayfalar arasında korunarak, bir alışveriş ortamı deneyimi temsil edilmiştir.",
       siteUrl: "https://pizzawebsitesi-s44q.vercel.app/",
       githubUrl:"https://github.com/Feyzanur-Ak/pizzawebsitesi",
+      imageUrl: pizzaImage,
       tags:["React","Redux","LocalStorage"],
     },
   ],
