@@ -7,7 +7,7 @@ export const contentData = {
     name: "Feyzanur Ak",
     title: "Imaginative Doer, Simplicity Enthusiast",
     description:
-      "Hi, I’m Feyzanur Ak, a full-stack developer. Let’s build amazing digital products together!",
+     "Hello, I'm Feyzanur Ak. I'm here to design aesthetic and functional websites tailored to your needs and dreams. Let's combine our creativity and create unique designs just for you!",
     skills: [
       {
         name: "JavaScript",
@@ -42,7 +42,7 @@ export const contentData = {
     name: "Feyzanur Ak",
     title: "Hayal Gücü Yüksek Uygulayıcı, Sadelik Meraklısı",
     description:
-      "Merhaba, ben Feyzanur Ak. Haydi birlikte istediğiniz şekilde web site tasarımları oluşturalım!",
+      "Merhaba, ben Feyzanur Ak. İhtiyaçlarınıza ve hayallerinize uygun, estetik ve işlevsel web siteleri tasarlamak için buradayım. Gelin, birlikte yaratıcılığımızı birleştirerek size özel tasarımlar oluşturalım!",
     skills: [
       {
         name: "JavaScript",

@@ -17,8 +17,8 @@ export default function MainPage() {
       
           <div className="md:w-1/2 space-y-10">
             <div className="flex items-center space-x-2">
-              <div className="w-20 h-[1px] bg-purple-600 py" />
-              <p className="font-bold text-purple-600">{name}</p>
+              <div className="w-20 h-[1px] bg-indigo-800 py" />
+              <p className="font-bold text-indigo-700">{name}</p>
             </div>
             <h1
               className={`text-5xl font-bold ${

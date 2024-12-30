@@ -21,10 +21,10 @@ export default function Header() {
       } transition-colors overflow-hidden`}
     >
       <div className="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
-        <div className="w-10 h-10 flex items-center justify-center rotate-6 rounded-full bg-purple-600 text-white text-lg font-bold">
+        <div className="w-10 h-10 flex items-center justify-center rotate-6 rounded-full bg-violet-100 text-violet-500 text-lg font-bold">
           F
         </div>
-        <div className="flex items-center space-x-8">
+        <div className="flex flex-col gap-6 space-x-8">
           <div className="flex space-x-4">
             <ThemeSwitcher />
             <LanguageSwitcher />
