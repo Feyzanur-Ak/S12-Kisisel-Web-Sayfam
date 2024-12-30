@@ -21,7 +21,7 @@ export default function Header() {
       } transition-colors overflow-hidden`}
     >
       <div className="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
-        <div className="w-10 h-10 flex items-center justify-center rotate-6 rounded-full bg-violet-100 text-violet-500 text-lg font-bold">
+        <div className={`w-10 h-10 flex items-center justify-center rotate-6 rounded-full text-lg font-bold  ${isDark ? "bg-indigo-700 text-indigo-500" : "bg-violet-100 text-violet-500" }`} >
           F
         </div>
         <div className="flex flex-col gap-6 space-x-8">
@@ -30,7 +30,7 @@ export default function Header() {
             <LanguageSwitcher />
           </div>
           <nav>
-            <ul className="flex gap-8 items-center">
+            <ul className="flex gap-20 items-center -mx-10">
               <li
                 className={`cursor-pointer hover:text-purple-400 ${
                   isDark ? "text-gray-400" : "text-gray-700"
