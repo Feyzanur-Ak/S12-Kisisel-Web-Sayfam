@@ -1,4 +1,4 @@
-import {BrowserRouter as Router,Route} from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { GlobalProvider } from './context/GlobalContext';
 import Header from './pages/Header';
 import MainPage from './pages/MainPage';
@@ -8,23 +8,28 @@ import Projects from './pages/Projects';
 import Footer from "./pages/Footer";
 
 function App() {
-
-
   return (
-
     <GlobalProvider>
-    <Router>
- <Route exact path="/" component={Header} />
-    </Router>
-    <MainPage/>
-    <Skills/>
-    <Profile/>
-    <Projects/>
-    <Footer/>
+      <Router>
+        <Header />
+        <main>
+          <div id="main">
+            <MainPage />
+          </div>
+          <div id="skills">
+            <Skills />
+          </div>
+          <div id="profile">
+            <Profile />
+          </div>
+          <div id="projects">
+            <Projects />
+          </div>
+        </main>
+        <Footer />
+      </Router>
     </GlobalProvider>
-     
-    
-  )
+  );
 }
 
-export default App
+export default App;
