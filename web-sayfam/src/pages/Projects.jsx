@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { GlobalContext } from "../context/GlobalContext";
 
 const Projects = () => {
-  const { theme, projects } = useContext(GlobalContext);
+  const { theme, projects , language} = useContext(GlobalContext);
   const isDark = theme === "dark";
 
   return (
@@ -10,10 +10,10 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto">
         <h1
           className={`text-5xl font-bold mx-8 mb-10 ${
-            isDark ? "text-gray-300" : "text-gray-900"
+            isDark ? "text-indigo-200" : "text-gray-900"
           }`}
         >
-          Projects
+           {language === "tr" ? "Projeler" : "Projects"}
         </h1>
         <div className="flex flex-wrap -mx-4">
           {projects.map((project) => (
@@ -36,7 +36,7 @@ const Projects = () => {
                 </h3>
                 <p
                   className={`mb-5 flex-grow ${
-                    isDark ? "text-gray-300" : "text-gray-500"
+                    isDark ? "text-neutral-200" : "text-gray-500"
                   }`}
                 >
                   {project.description}
@@ -47,7 +47,7 @@ const Projects = () => {
                       key={index}
                       className={`px-3 py-1 border rounded-md text-sm ${
                         isDark
-                          ? "text-purple-300 border-purple-300 bg-gray-700"
+                          ? "text-indigo-500 border-indigo-500 bg-neutral-700"
                           : "text-purple-600 border-purple-600"
                       }`}
                     >

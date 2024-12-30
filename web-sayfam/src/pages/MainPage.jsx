@@ -22,33 +22,41 @@ export default function MainPage() {
             </div>
             <h1
               className={`text-5xl font-bold ${
-                isDark ? "text-gray-300" : "text-black"
+                isDark ? "text-indigo-200" : "text-black"
               }`}
             >
               {title}
             </h1>
             <p
-              className={`text-xl font-bold ${
-                isDark ? "text-gray-300" : "text-gray-500"
+              className={`text-xl font-normal ${
+                isDark ? "text-neutral-200" : "text-gray-500"
               }`}
             >
               {description}
             </p>
-            <div className="flex flex-wrap gap-6 mt-4">
+            <div className="flex flex-wrap gap-4 mt-4">
               <button
-                className={`transition-colors px-4 py-2 rounded-md font-medium ${
+                className={`transition-colors px-5 py-2 rounded-md font-medium ${
                   isDark
-                    ? "bg-white text-purple-600 hover:bg-gray-200"
+                    ? "bg-indigo-100 text-zinc-950"
                     : "text-purple-600 border border-purple-600 hover:bg-purple-600 hover:text-white"
                 }`}
               >
                 Hire Me
               </button>
-              <button className="px-5 py-2 flex items-center space-x-2 gap-3 border border-purple-600 text-purple-600 rounded-md hover:bg-purple-50 transition">
+              <button className={`px-5 py-2 flex items-center space-x-2 gap-3 border rounded-md ${
+                  isDark
+                    ? "bg-neutral-700 text-violet-300 hover:bg-gray-200"
+                    : "text-purple-600 border border-purple-600 "
+                } `}>
                 <FaGithub size={18} />
                 Git Hub
               </button>
-              <button className="px-5 py-2 flex items-center space-x-2 gap-3 border border-purple-600 text-purple-600 rounded-md hover:bg-purple-50 transition">
+              <button className={`px-5 py-2 flex items-center space-x-2 gap-3 border rounded-md ${
+                  isDark
+                    ? "bg-neutral-700 text-violet-300 hover:bg-gray-200"
+                    : "text-purple-600 border border-purple-600 "
+                } `}>
                 <FaLinkedin size={18} />
                 Linkedln
               </button>

@@ -15,7 +15,7 @@ const Skills = () => {
         <h2
           className={`
             text-5xl font-bold mb-10
-            ${isDark ? 'text-gray-300' : 'text-gray-900'}
+            ${isDark ? 'text-indigo-200' : 'text-gray-900'}
           `}
         >
           {language === 'tr' ? 'Becerilerim' : 'Skills'}
@@ -35,7 +35,7 @@ const Skills = () => {
               <p
                 className={`
                   text-base leading-relaxed text-justify
-                  ${isDark ? 'text-gray-400' : 'text-gray-600'}
+                  ${isDark ? 'text-neutral-200' : 'text-gray-600'}
                 `}
               >
                 {skill.description}

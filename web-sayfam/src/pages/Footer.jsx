@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <section
       className={`w-screen px-8 py-10  ${
-        isDark ? "bg-black text-white" : "bg-gray-100 text-gray-900"
+        isDark ? "bg-black text-indigo-100" : "bg-gray-100 text-gray-900"
       }`}
     >
 <div className="max-w-7xl mx-auto">
@@ -30,7 +30,7 @@ const Footer = () => {
           <span role="img" aria-label="mail" className="mr-2">
             📧
           </span>
-          <p className={`underline ${isDark ? "text-purple-200" : "text-black"}`}>senturkfeyzanur96@gmail.com</p>
+          <p className={`underline ${isDark ? "text-violet-300" : "text-black"}`}>senturkfeyzanur96@gmail.com</p>
         </a>
 
       

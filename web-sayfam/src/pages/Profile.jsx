@@ -18,10 +18,10 @@ const Profile = () => {
         isDark ? "bg-gray-800" : "bg-white"
       }`}
     >
-      <div className="max-w-7xl mx-80">
+      <div className="max-w-7xl mx-60">
         <h2
           className={`text-5xl font-bold mb-10 ${
-            isDark ? "text-gray-300" : "text-gray-900"
+            isDark ? "text-indigo-200" : "text-gray-900"
           }`}
         >
           {language === "tr" ? "Profil" : "Profile"}
@@ -42,14 +42,14 @@ const Profile = () => {
             <div className="flex gap-16">
               <h3
                 className={`text-lg font-bold ${
-                  isDark ? "text-gray-300" : "text-purple-600"
+                  isDark ? "text-neutral-200" : "text-purple-600"
                 }`}
               >
                 {labels.birthDate}
               </h3>
               <p
                 className={`text-lg ${
-                  isDark ? "text-gray-300" : "text-gray-700"
+                  isDark ? "text-neutral-200" : "text-gray-700"
                 }`}
               >
                 {profile[labels.birthDate]}
@@ -58,7 +58,7 @@ const Profile = () => {
             <div className="flex gap-12">
               <h3
                 className={`text-lg font-bold ${
-                  isDark ? "text-gray-300" : "text-purple-600"
+                  isDark ? "text-neutral-200" : "text-purple-600"
                 }`}
               >
                 {labels.education}
@@ -74,14 +74,14 @@ const Profile = () => {
             <div className="flex gap-12">
               <h3
                 className={`text-lg font-bold ${
-                  isDark ? "text-gray-300" : "text-purple-600"
+                  isDark ? "text-neutral-200" : "text-purple-600"
                 }`}
               >
                 {labels.preferredRole}
               </h3>
               <p
                 className={`text-lg ${
-                  isDark ? "text-gray-300" : "text-gray-700"
+                  isDark ? "text-neutral-200" : "text-gray-700"
                 }`}
               >
                 {profile[labels.preferredRole]}
@@ -99,7 +99,7 @@ const Profile = () => {
             </h3>
             <p
               className={`text-lg leading-8 ${
-                isDark ? "text-gray-300" : "text-gray-700"
+                isDark ? "text-neutral-200" : "text-gray-700"
               }`}
             >
               {profile.aboutMe}
