@@ -25,7 +25,7 @@ const Footer = () => {
        
         <a
           href="mailto:senturkfeyzanur96@gmail.com"
-          className="text-lg text-red-500 hover:underline flex items-center mb-4 md:mb-0 "
+          className="text-lg  flex items-center mb-4 md:mb-0 "
         >
           <span role="img" aria-label="mail" className="mr-2">
             📧
