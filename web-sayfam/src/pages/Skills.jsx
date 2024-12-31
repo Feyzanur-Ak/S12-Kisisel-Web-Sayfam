@@ -18,7 +18,7 @@ const Skills = () => {
             ${isDark ? 'text-indigo-200' : 'text-gray-900'}
           `}
         >
-          {language === 'tr' ? 'Becerilerim' : 'Skills'}
+          {language === 'tr' ? 'Yetenekler' : 'Skills'}
         </h2>
 
         <div className="flex flex-col md:flex-row md:justify-between gap-12">

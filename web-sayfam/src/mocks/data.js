@@ -35,7 +35,7 @@ export const contentData = {
     nav: {
       skills: "Skills",
       projects: "Projects",
-      hireMe: "Hire me",
+      hireMe: "Contact Me",
     },
   },
   tr: {
@@ -70,7 +70,7 @@ export const contentData = {
     nav: {
       skills: "Yetenekler",
       projects: "Projeler",
-      hireMe: "Beni İşe Al",
+      hireMe: "İletişime Geç",
     },
   },
 }

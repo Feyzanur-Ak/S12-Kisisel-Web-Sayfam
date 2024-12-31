@@ -2,10 +2,12 @@ import { useContext } from "react";
 import { GlobalContext } from "../context/GlobalContext";
 import ThemeSwitcher from "../components/ThemeSwitcher";
 import LanguageSwitcher from "../components/LanguageSwitcher";
+import { useHistory } from "react-router-dom";
 
 export default function Header() {
   const { theme, nav } = useContext(GlobalContext);
   const isDark = theme === "dark";
+  const history = useHistory();
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -30,7 +32,7 @@ export default function Header() {
             <LanguageSwitcher />
           </div>
           <nav>
-            <ul className="flex gap-20 items-center -mx-10">
+            <ul className="flex gap-20 items-center -mx-20">
               <li
                 className={`cursor-pointer hover:text-purple-400 ${
                   isDark ? "text-gray-400" : "text-gray-700"
@@ -48,7 +50,8 @@ export default function Header() {
                 {nav.projects}
               </li>
               <li>
-                <button
+              
+                <button onClick={() => history.push("/contact")}
                   className={`transition-colors px-4 py-2 rounded-md font-medium ${
                     isDark
                       ? "bg-white text-purple-600 hover:bg-gray-200"
@@ -57,6 +60,7 @@ export default function Header() {
                 >
                   {nav.hireMe}
                 </button>
+               
               </li>
             </ul>
           </nav>

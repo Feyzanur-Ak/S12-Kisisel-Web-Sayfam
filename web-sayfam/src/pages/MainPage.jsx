@@ -3,7 +3,7 @@ import { GlobalContext } from "../context/GlobalContext";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function MainPage() {
-  const { title, name, description, theme } = useContext(GlobalContext);
+  const { title, name, description, theme , language} = useContext(GlobalContext);
   const isDark = theme === "dark";
 
   return (
@@ -42,7 +42,7 @@ export default function MainPage() {
                     : "text-purple-600 border border-purple-600 hover:bg-purple-600 hover:text-white"
                 }`}
               >
-                Hire Me
+                {language === "tr" ? "İletişime Geç" : "Contact Me"}
               </button>
               <button className={`px-5 py-2 flex items-center space-x-2 gap-3 border rounded-md ${
                   isDark
