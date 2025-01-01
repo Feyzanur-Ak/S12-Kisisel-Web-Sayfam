@@ -1,4 +1,10 @@
+
+
 const ContactPages = () => {
+
+
+
+
   return (
     <div className="flex items-center justify-center h-screen bg-cover bg-center bg-custom-bg">
       {/* Ana kapsayıcı */}

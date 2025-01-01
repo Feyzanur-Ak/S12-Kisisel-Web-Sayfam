@@ -23,9 +23,16 @@ export default function Header() {
       } transition-colors overflow-hidden`}
     >
       <div className="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
-        <div className={`w-[62px] h-[62px] flex items-center justify-center rotate-6 rounded-full text-2xl font-bold  ${isDark ? "bg-indigo-700 text-indigo-500" : "bg-violet-100 text-violet-500" }`} >
-          F
-        </div>
+      <button
+      onClick={() => history.push("/")}
+      className={`w-[62px] h-[62px] flex items-center justify-center rotate-6 rounded-full text-2xl font-bold transition-transform duration-300 hover:scale-110 ${
+        isDark
+          ? "bg-indigo-700 text-indigo-500"
+          : "bg-violet-100 text-violet-500"
+      }`}
+    >
+      F
+    </button>
         <div className="flex flex-col gap-6 space-x-8">
           <div className="flex space-x-4">
             <ThemeSwitcher />
