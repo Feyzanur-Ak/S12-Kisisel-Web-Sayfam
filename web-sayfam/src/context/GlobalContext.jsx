@@ -17,22 +17,21 @@ export const GlobalProvider = ({ children }) => {
   const { title, description, skills, profile, name, nav } = content;
 
   const toggleLanguage = () => {
-    setLanguage((prev) => (prev === "tr" ? "en" : "tr"));
+    setLanguage((language === "tr" ? "en" : "tr"));
   };
 
   const toggleTheme = () => {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+    setTheme(theme === "light" ? "dark" : "light");
   };
 
-  const getModeText = () => {
-    return language === "tr"
-      ? theme === "dark"
-        ? "KARANLIK MOD"
-        : "AYDINLIK MOD"
-      : theme === "dark"
-      ? "DARK MODE"
-      : "LIGHT MODE";
-  };
+  const getModeText = () => 
+    language === "tr" 
+      ? theme === "dark" 
+        ? "KARANLIK MOD" 
+        : "AYDINLIK MOD" 
+      : theme === "dark" 
+        ? "DARK MODE" 
+        : "LIGHT MODE";
 
   const values = {
     name,

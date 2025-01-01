@@ -5,7 +5,8 @@ export const useLocalStorage = (key, initialValue) => {
     try {
       const storedData = localStorage.getItem(key);
 
-     
+   
+
       if (!storedData || storedData === "undefined") {
         localStorage.setItem(key, JSON.stringify(initialValue));
         return initialValue;
@@ -23,7 +24,9 @@ export const useLocalStorage = (key, initialValue) => {
     if (newValue === undefined) {
       console.error(`Error: Trying to set "${key}" with an undefined value.`);
       return;
+      
     }
+    console.log(newValue);
 
     try {
       localStorage.setItem(key, JSON.stringify(newValue));
