@@ -1,37 +1,37 @@
-
-import { createContext } from 'react';
-import { useLocalStorage } from '../hooks/useLocalStorage';
-import { contentData, projectsData } from '../mocks/data';
-
+import { createContext } from "react";
+import { useLocalStorage } from "../hooks/useLocalStorage";
+import { contentData, projectsData } from "../mocks/data";
 
 export const GlobalContext = createContext();
 
 // eslint-disable-next-line react/prop-types
-export const GlobalProvider = ({children}) => {
-   
-  const [language, setLanguage] = useLocalStorage('language', 'tr');
-  const [theme, setTheme] = useLocalStorage('theme', 'light');
+export const GlobalProvider = ({ children }) => {
+  const [language, setLanguage] = useLocalStorage("language", "tr");
+  const [theme, setTheme] = useLocalStorage("theme", "light");
 
+  // Dil kontrolü yap
+  const content = contentData[language] || contentData["tr"];
+  const projects = projectsData[language] || projectsData["tr"];
 
-  const { title, description, skills, profile, name, nav} = contentData[language];
-  const projects = projectsData[language];
+  // `content` içinden değerleri destructure et
+  const { title, description, skills, profile, name, nav } = content;
 
   const toggleLanguage = () => {
-    setLanguage((prev) => (prev === 'tr' ? 'en' : 'tr'));
+    setLanguage((prev) => (prev === "tr" ? "en" : "tr"));
   };
-
 
   const toggleTheme = () => {
-    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
- 
-  const getModeText = (lang, thm) => {
-    if (lang === 'tr') {
-      return thm === 'dark' ? 'KARANLIK MOD' : 'AYDINLIK MOD';
-    } else {
-      return thm === 'dark' ? 'DARK MODE' : 'LIGHT MODE';
-    }
+  const getModeText = () => {
+    return language === "tr"
+      ? theme === "dark"
+        ? "KARANLIK MOD"
+        : "AYDINLIK MOD"
+      : theme === "dark"
+      ? "DARK MODE"
+      : "LIGHT MODE";
   };
 
   const values = {
@@ -48,12 +48,8 @@ export const GlobalProvider = ({children}) => {
     nav,
     toggleLanguage,
     toggleTheme,
-    getModeText
+    getModeText,
   };
 
-  return (
-    <GlobalContext.Provider value={values}>
-      {children}
-    </GlobalContext.Provider>
-  );
+  return <GlobalContext.Provider value={values}>{children}</GlobalContext.Provider>;
 };
