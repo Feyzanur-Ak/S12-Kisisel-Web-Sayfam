@@ -1,6 +1,6 @@
-import pizzaImage from "../images/pizzawebsayfası.png";
-import witImage from "../images/witflix.png";
-import netImage from "../images/netflix.png";
+import pizzaImage from "../../public/images/pizzawebsayfası.png";
+import witImage from "../../public/images/witflix.png";
+import netImage from "../../public/images/netflix.png";
 
 export const contentData = {
   en: {

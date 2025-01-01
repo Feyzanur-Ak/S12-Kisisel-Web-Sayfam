@@ -7,10 +7,9 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'custom-bg': "url('../src/images/contactmebg.png')",
-      }
+        'custom-bg': "url('/images/contactmebg.png')",
+      },
     },
   },
   plugins: [],
 }
-
