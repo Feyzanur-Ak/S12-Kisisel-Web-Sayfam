@@ -1,16 +1,14 @@
-import { useContext } from "react";
-import { GlobalContext } from "../context/GlobalContext";
+import useGlobalContext from "../hooks/useGlobalContext";
 
-export default function LanguageSwitcher() {
-  const { language, toggleLanguage } = useContext(GlobalContext);
+const LanguageSwitcher = () => {
+  const { language, toggleLanguage } = useGlobalContext();
 
   return (
-    <span
-      className="cursor-pointer space-x-4 "
-      onClick={toggleLanguage}
-    >
-      <span className="m-4">|</span>
+    <span className="cursor-pointer m-4 space-x-4" onClick={toggleLanguage}>
+      <span>|</span>
       <span>{language === "tr" ? "SWITCH TO ENGLISH" : "TÜRKÇE'YE GEÇ"}</span>
     </span>
   );
-}
+};
+
+export default LanguageSwitcher;

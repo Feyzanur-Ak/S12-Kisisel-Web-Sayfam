@@ -37,7 +37,18 @@ export const contentData = {
       projects: "Projects",
       hireMe: "Contact Me",
     },
+    contact: {
+      title: "Contact Me",
+      namePlaceholder: "Enter your name...",
+      surnamePlaceholder: "Enter your surname...",
+      emailPlaceholder: "Enter your email...",
+      phonePlaceholder: "Enter your phone number...",
+      messagePlaceholder: "Enter your message...",
+      buttonText: "Submit",
+      developerInfo: "Frontend Developer",
+    },
   },
+  
   tr: {
     name: "Feyzanur Ak",
     title: "Hayal Gücü Yüksek Uygulayıcı, Sadelik Meraklısı",
@@ -71,6 +82,16 @@ export const contentData = {
       skills: "Yetenekler",
       projects: "Projeler",
       hireMe: "İletişime Geç",
+    },
+    contact: {
+      title: "Bana Ulaşın",
+      namePlaceholder: "Adınızı girin...",
+      surnamePlaceholder: "Soyadınızı girin...",
+      emailPlaceholder: "E-postanızı girin...",
+      phonePlaceholder: "Telefon numaranızı girin...",
+      messagePlaceholder: "Mesajınızı girin...",
+      buttonText: "Gönder",
+      developerInfo: "Frontend Geliştirici",
     },
   },
 }

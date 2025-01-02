@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import { GlobalContext } from "../context/GlobalContext";
+import useGlobalContext from "../hooks/useGlobalContext";
 
 export default function ThemeSwitcher() {
-  const { theme, toggleTheme, language, getModeText } = useContext(GlobalContext);
+  const { theme, toggleTheme, language, getModeText } = useGlobalContext();
   const isDark = theme === "dark";
 
   return (

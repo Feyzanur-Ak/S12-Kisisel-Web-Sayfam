@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setField, setErrors, reset } from "../store/actions/userAction";
 import { useApi } from "../mocks/api.js";
 import { toast, ToastContainer } from "react-toastify";
+import useGlobalContext from "../hooks/useGlobalContext";
 
 const ContactPages = () => {
   const dispatch = useDispatch();
@@ -9,6 +10,7 @@ const ContactPages = () => {
     (state) => state.user
   );
   const { postToApi } = useApi();
+  const { language, contact } = useGlobalContext();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,10 +29,10 @@ const ContactPages = () => {
     try {
       const data = { name, surname, email, phone, message };
       await postToApi(data); // POST işlemi
-      toast.success("Mesajınız başarıyla gönderildi!"); // Başarı toastı
+      toast.success(language === "tr" ? "Mesajınız başarıyla gönderildi!" : "Your message has been sent!");
       dispatch(reset()); // Formu sıfırla
     } catch (error) {
-      toast.error("Mesaj gönderimi sırasında bir hata oluştu."); // Hata toastı
+      toast.error(language === "tr" ? "Mesaj gönderimi sırasında bir hata oluştu." : "An error occurred while sending the message.");
       console.error("API Error:", error);
     }
   };
@@ -43,14 +45,14 @@ const ContactPages = () => {
         <div className="flex flex-col justify-between p-10 text-white w-1/2">
           <div>
             <h1 className="text-5xl font-bold">Feyzanur Ak</h1>
-            <p className="mt-2 text-lg">Frontend Developer, Engineer</p>
+            <p className="mt-2 text-lg">{contact.developerInfo}</p>
           </div>
         </div>
 
         {/* Sağ taraf */}
         <div className="flex flex-col w-1/2 p-10 text-white">
           {/* Form Başlığı */}
-          <h2 className="text-3xl font-bold text-white">Contact Me</h2>
+          <h2 className="text-3xl font-bold text-white">{contact.title}</h2>
           <hr className="my-4 border-gray-400" />
 
           {/* Hata mesajı */}
@@ -63,7 +65,7 @@ const ContactPages = () => {
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="name" className="block text-lg font-medium text-white">
-                Name
+               {language==="tr" ? "İsim" : "Name"}
               </label>
               <input
                 type="text"
@@ -71,7 +73,7 @@ const ContactPages = () => {
                 id="name"
                 value={name}
                 onChange={handleChange}
-                placeholder="Please enter your name..."
+                placeholder={contact.namePlaceholder}
                 className="w-full py-2 px-4 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-200 text-black bg-white"
               />
             </div>
@@ -81,7 +83,7 @@ const ContactPages = () => {
                 htmlFor="surname"
                 className="block text-lg font-medium text-white"
               >
-                Surname
+                {language==="tr" ? "Soyisim" : "Surname"}
               </label>
               <input
                 type="text"
@@ -89,7 +91,7 @@ const ContactPages = () => {
                 id="surname"
                 value={surname}
                 onChange={handleChange}
-                placeholder="Please enter your surname..."
+                placeholder={contact.surnamePlaceholder}
                className="w-full py-2 px-4 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-200 text-black bg-white"
               />
             </div>
@@ -104,14 +106,14 @@ const ContactPages = () => {
                 id="email"
                 value={email}
                 onChange={handleChange}
-                placeholder="Please enter your email..."
+                placeholder={contact. emailPlaceholder}
                 className="w-full py-2 px-4 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-200 text-black bg-white"
               />
             </div>
 
             <div>
               <label htmlFor="phone" className="block text-lg font-medium text-white">
-                Phone
+              {language==="tr" ? "Telefon" : "Phone"}
               </label>
               <input
                 type="text"
@@ -119,21 +121,21 @@ const ContactPages = () => {
                 id="phone"
                 value={phone}
                 onChange={handleChange}
-                placeholder="Please enter your phone number..."
+                placeholder={contact. phonePlaceholder}
                  className="w-full py-2 px-4 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-200 text-black bg-white"
               />
             </div>
 
             <div>
               <label htmlFor="message" className="block text-lg font-medium text-white">
-                Message
+              {language==="tr" ? "Mesaj" : "Message"}
               </label>
               <textarea
                 name="message"
                 id="message"
                 value={message}
                 onChange={handleChange}
-                placeholder="Please enter your message..."
+                placeholder={contact.messagePlaceholder}
              className="w-full py-2 px-4 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-200 text-black bg-white"
               />
             </div>
@@ -142,7 +144,7 @@ const ContactPages = () => {
               type="submit"
               className="w-full py-2 px-4 mt-4 text-white bg-teal-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-300"
             >
-              Submit
+              {language==="tr" ? "Gönder" : "Submit"}
             </button>
           </form>
         </div>

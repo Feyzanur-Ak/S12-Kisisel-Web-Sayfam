@@ -16,7 +16,7 @@ export const GlobalProvider = ({ children }) => {
 
 
   // `content` içinden değerleri destructure et
-  const { title, description, skills, profile, name, nav } = content;
+  const { title, description, skills, profile, name, nav, contact } = content;
 
   const toggleLanguage = () => {
     setLanguage((language === "tr" ? "en" : "tr"));
@@ -47,11 +47,10 @@ export const GlobalProvider = ({ children }) => {
     skills,
     projects,
     nav,
+    contact,
     toggleLanguage,
     toggleTheme,
     getModeText,
-   
-    
   };
 
   return <GlobalContext.Provider value={values}>{children}</GlobalContext.Provider>;
