@@ -42,7 +42,7 @@ const Footer = () => {
           {/* Sosyal Medya Linkleri */}
           <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 text-lg text-center">
             <a
-              href="https://personalblog.com"
+              href="https://s12-kisisel-web-sayfam-gzjj.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"
