@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import { GlobalContext } from "../context/GlobalContext";
+import useGlobalContext from "../hooks/useGlobalContext";
 
 const Profile = () => {
-  const { theme, language, profile } = useContext(GlobalContext);
+  const { theme, language, profile } = useGlobalContext();
   const isDark = theme === "dark";
 
   const labels = {

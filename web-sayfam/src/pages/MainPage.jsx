@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import { GlobalContext } from "../context/GlobalContext";
+import useGlobalContext from "../hooks/useGlobalContext";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function MainPage() {
-  const { title, name, description, theme , language} = useContext(GlobalContext);
+  const { title, name, description, theme , language} = useGlobalContext();
   const isDark = theme === "dark";
 
   return (

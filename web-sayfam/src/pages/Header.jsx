@@ -1,11 +1,10 @@
-import { useContext} from "react";
-import { GlobalContext } from "../context/GlobalContext";
+import useGlobalContext from "../hooks/useGlobalContext";
 import ThemeSwitcher from "../components/ThemeSwitcher";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 import { useHistory } from "react-router-dom";
 
 export default function Header() {
-  const { theme, nav } = useContext(GlobalContext);
+  const { theme, nav } = useGlobalContext();
   const isDark = theme === "dark";
   const history = useHistory();
 

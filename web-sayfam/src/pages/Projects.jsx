@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import { GlobalContext } from "../context/GlobalContext";
+import useGlobalContext from "../hooks/useGlobalContext";
 
 const Projects = () => {
-  const { theme, projects , language} = useContext(GlobalContext);
+  const { theme, projects , language} = useGlobalContext();
   const isDark = theme === "dark";
 
   return (

@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import { GlobalContext } from "../context/GlobalContext";
+import useGlobalContext from "../hooks/useGlobalContext";
 
 const Footer = () => {
-  const { theme, language } = useContext(GlobalContext);
+  const { theme, language } = useGlobalContext();
   const isDark = theme === "dark";
 
   return (

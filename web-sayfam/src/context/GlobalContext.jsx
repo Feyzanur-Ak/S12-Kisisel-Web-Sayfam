@@ -55,4 +55,5 @@ export const GlobalProvider = ({ children }) => {
   };
 
   return <GlobalContext.Provider value={values}>{children}</GlobalContext.Provider>;
+  
 };
