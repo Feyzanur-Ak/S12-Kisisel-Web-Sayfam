@@ -18,7 +18,7 @@ export default function Header() {
   };
 
   return (
-    <header
+    <header 
       className={`${
         isDark ? "bg-gray-800 text-white" : "bg-white text-black"
       } transition-colors overflow-hidden`}
