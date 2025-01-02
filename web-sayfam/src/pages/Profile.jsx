@@ -17,7 +17,7 @@ const Profile = () => {
         isDark ? "bg-gray-800" : "bg-white"
       }`}
     >
-      <div className="max-w-7xl w-full mx-auto px-6 sm:px-12">
+      <div className="max-w-7xl w-full mx-60 px-6 sm:px-10">
         <h2
           className={`text-3xl sm:text-5xl font-bold mb-6 sm:mb-10 ${
             isDark ? "text-indigo-200" : "text-gray-900"
