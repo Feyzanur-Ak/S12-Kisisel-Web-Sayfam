@@ -1,12 +1,13 @@
 import useGlobalContext from "../hooks/useGlobalContext";
 import ThemeSwitcher from "../components/ThemeSwitcher";
 import LanguageSwitcher from "../components/LanguageSwitcher";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 
 export default function Header() {
   const { theme, nav } = useGlobalContext();
   const isDark = theme === "dark";
   const history = useHistory();
+  const location = useLocation();
 
 
   const scrollToSection = (sectionId) => {
@@ -44,7 +45,14 @@ export default function Header() {
                 className={`cursor-pointer hover:text-purple-400 ${
                   isDark ? "text-gray-400" : "text-gray-700"
                 }`}
-                onClick={() => scrollToSection("skills")}
+                onClick={() => {
+                  if (location.pathname === "/") {
+                    scrollToSection("skills");
+                  } else {
+                    history.push("/");
+                    setTimeout(() => scrollToSection("skills"), 300); // Sayfa geçişini beklemek için
+                  }
+                }}
               >
                 {nav.skills}
               </li>
@@ -52,7 +60,14 @@ export default function Header() {
                 className={`cursor-pointer hover:text-purple-400 ${
                   isDark ? "text-gray-400" : "text-gray-700"
                 }`}
-                onClick={() => scrollToSection("projects")}
+                onClick={() => {
+                  if (location.pathname === "/") {
+                    scrollToSection("projects");
+                  } else {
+                    history.push("/");
+                    setTimeout(() => scrollToSection("projects"), 300);
+                  }
+                }}
               >
                 {nav.projects}
               </li>
