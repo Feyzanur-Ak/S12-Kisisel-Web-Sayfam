@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext} from "react";
 import { GlobalContext } from "../context/GlobalContext";
 import ThemeSwitcher from "../components/ThemeSwitcher";
 import LanguageSwitcher from "../components/LanguageSwitcher";
@@ -8,6 +8,7 @@ export default function Header() {
   const { theme, nav } = useContext(GlobalContext);
   const isDark = theme === "dark";
   const history = useHistory();
+
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);

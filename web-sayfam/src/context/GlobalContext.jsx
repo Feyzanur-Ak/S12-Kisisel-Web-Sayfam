@@ -13,6 +13,8 @@ export const GlobalProvider = ({ children }) => {
   const content = contentData[language] || contentData["tr"];
   const projects = projectsData[language] || projectsData["tr"];
 
+
+
   // `content` içinden değerleri destructure et
   const { title, description, skills, profile, name, nav } = content;
 
@@ -48,6 +50,8 @@ export const GlobalProvider = ({ children }) => {
     toggleLanguage,
     toggleTheme,
     getModeText,
+   
+    
   };
 
   return <GlobalContext.Provider value={values}>{children}</GlobalContext.Provider>;

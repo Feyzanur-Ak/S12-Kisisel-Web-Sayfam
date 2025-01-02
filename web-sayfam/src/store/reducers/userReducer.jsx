@@ -5,6 +5,8 @@ const initialContactState = {
     name: "",
     surname: "",
     message: "",
+    email: "",
+    phone: "",
     errors: {},
   }
 
@@ -23,7 +25,7 @@ export default function userReducer(state = initialContactState, action) {
             }
 
         case RESET:
-            return {}
+            return initialContactState;
 
         default:
             return state
