@@ -1,9 +1,13 @@
 import useGlobalContext from "../hooks/useGlobalContext";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useHistory } from "react-router-dom";
 
 export default function MainPage() {
   const { title, name, description, theme , language} = useGlobalContext();
   const isDark = theme === "dark";
+  const history = useHistory();
+
+
 
   return (
     <section
@@ -35,6 +39,7 @@ export default function MainPage() {
             </p>
             <div className="flex flex-wrap gap-4 mt-4">
               <button
+              onClick={()=>history.push('/contact')}
                 className={`transition-colors px-5 py-2 rounded-md font-medium ${
                   isDark
                     ? "bg-indigo-100 text-zinc-950"
@@ -43,18 +48,22 @@ export default function MainPage() {
               >
                 {language === "tr" ? "İletişime Geç" : "Contact Me"}
               </button>
-              <button className={`px-5 py-2 flex items-center space-x-2 gap-3 border rounded-md ${
+              <button 
+                  onClick={()=>window.open("https://github.com/Feyzanur-Ak")}
+                 className={`px-5 py-2 flex items-center space-x-2 gap-3 border rounded-md ${
                   isDark
                     ? "bg-neutral-700 text-violet-300 hover:bg-gray-200"
-                    : "text-purple-600 border border-purple-600 "
+                    : "text-purple-600 border border-purple-600  hover:bg-purple-600 hover:text-white"
                 } `}>
                 <FaGithub size={18} />
                 Git Hub
               </button>
-              <button className={`px-5 py-2 flex items-center space-x-2 gap-3 border rounded-md ${
+              <button 
+              onClick={()=>window.open("https://www.linkedin.com/in/feyzanur-ak/")}
+              className={`px-5 py-2 flex items-center space-x-2 gap-3 border rounded-md ${
                   isDark
                     ? "bg-neutral-700 text-violet-300 hover:bg-gray-200"
-                    : "text-purple-600 border border-purple-600 "
+                    : "text-purple-600 border border-purple-600  hover:bg-purple-600 hover:text-white "
                 } `}>
                 <FaLinkedin size={18} />
                 Linkedln
