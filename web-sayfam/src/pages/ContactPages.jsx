@@ -45,7 +45,7 @@ const ContactPages = () => {
       <ToastContainer /> {/* Toast mesajları için gerekli */}
       <div className="flex w-full max-w-6xl bg-teal-700/30 backdrop-blur-md shadow-lg rounded-lg">
         {/* Sol taraf */}
-        <div className="flex flex-col justify-between p-10 text-white w-1/2 hidden lg:flex ">
+        <div className="flex flex-col justify-between p-10 text-white w-1/2">
           <div>
             <h1 className="text-5xl font-bold">Feyzanur Ak</h1>
             <p className="mt-2 text-lg">{contact.developerInfo}</p>
@@ -65,9 +65,9 @@ const ContactPages = () => {
 
 
           {/* Form Alanları */}
-          <form className="space-y-6 w-full max-w-md " onSubmit={handleSubmit}>
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="name" className="block text-lg font-medium text-white hidden md:block">
+              <label htmlFor="name" className="block text-lg font-medium text-white">
                {language==="tr" ? "İsim" : "Name"}
               </label>
               <input
