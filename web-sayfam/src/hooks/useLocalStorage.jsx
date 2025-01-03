@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+{/* Standart useLocalStorage  yapısı oluşturuuldu */}
+
 export const useLocalStorage = (key, initialValue) => {
   const [data, setData] = useState(() => {
     const storedData = JSON.parse(localStorage.getItem(key));
@@ -13,5 +15,5 @@ export const useLocalStorage = (key, initialValue) => {
     setData(newValue);
   };
 
-  return [data, updateStorage];
+  return [data, updateStorage]; 
 };
