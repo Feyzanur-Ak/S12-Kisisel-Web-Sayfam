@@ -63,14 +63,23 @@ describe('ContactPages Component', () => {
     renderComponent();
 
     const submitButton = screen.getByRole('button', { name: /Gönder|Submit/i });
-
     fireEvent.click(submitButton);
+    
 
-    expect(screen.getByText(/All fields are required!/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/All fields are required!|Tüm alanlar zorunludur!/i)
+    ).toBeInTheDocument();
+    
   });
 
   it('displays a success toast when the form is submitted successfully', async () => {
     renderComponent();
+
+    vi.mock('../mocks/api.js', () => ({
+      useApi: () => ({
+        postToApi: vi.fn(() => Promise.resolve({ success: true })),
+      }),
+    }));
 
     const nameInput = screen.getByLabelText(/İsim|Name/i);
     const surnameInput = screen.getByLabelText(/Soyisim|Surname/i);
@@ -90,6 +99,8 @@ describe('ContactPages Component', () => {
   });
 
   it('displays an error toast when the API call fails', async () => {
+
+    {/*Test sırasında bir modülü taklit etmek için kullanılır.Burada, ../mocks/api.js modülü mocklanarak, useApi hook'unun bir simülasyonu oluşturulmuştur. */}
     vi.mock('../mocks/api.js', () => ({
       useApi: () => ({
         postToApi: vi.fn(() => Promise.reject(new Error('API Error'))),
