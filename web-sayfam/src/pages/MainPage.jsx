@@ -1,6 +1,7 @@
 import useGlobalContext from "../hooks/useGlobalContext";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useHistory } from "react-router-dom";
+import meImage from "../../public/images/ben.jpg";
 
 export default function MainPage() {
   const { title, name, description, theme , language} = useGlobalContext();
@@ -52,7 +53,7 @@ export default function MainPage() {
                   onClick={()=>window.open("https://github.com/Feyzanur-Ak")}
                  className={`px-5 py-2 flex items-center space-x-2 gap-3 border rounded-md ${
                   isDark
-                    ? "bg-neutral-700 text-violet-300 hover:bg-gray-200"
+                    ? "bg-neutral-700 text-violet-300  hover:bg-purple-600 hover:text-white"
                     : "text-purple-600 border border-purple-600  hover:bg-purple-600 hover:text-white"
                 } `}>
                 <FaGithub size={18} />
@@ -62,7 +63,7 @@ export default function MainPage() {
               onClick={()=>window.open("https://www.linkedin.com/in/feyzanur-ak/")}
               className={`px-5 py-2 flex items-center space-x-2 gap-3 border rounded-md ${
                   isDark
-                    ? "bg-neutral-700 text-violet-300 hover:bg-gray-200"
+                    ? "bg-neutral-700 text-violet-300  hover:bg-purple-600 hover:text-white"
                     : "text-purple-600 border border-purple-600  hover:bg-purple-600 hover:text-white "
                 } `}>
                 <FaLinkedin size={18} />
@@ -75,7 +76,7 @@ export default function MainPage() {
           <div className="md:w-1/2 flex justify-center">
             <img
               className="rounded-xl shadow-lg w-full h-auto"
-              src="https://picsum.photos/400/300"
+              src={meImage}
               alt="Example"
             />
           </div>
