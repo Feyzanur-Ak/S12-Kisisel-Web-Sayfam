@@ -6,14 +6,17 @@ import useGlobalContext from "../hooks/useGlobalContext";
 
 const ContactPages = () => {
   const dispatch = useDispatch();
+  {/* useSelector kullanarak storedan name, surname, email, phone, message, errors degerlerini alıyoruz */ }
   const { name, surname, email, phone, message, errors } = useSelector(
     (state) => state.user
   );
   const { postToApi } = useApi();
   const { language, contact } = useGlobalContext();
 
+
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target; 
+    {/*burada input içindeki name ve value değerlerini aslında destructuring ile alıyoruz */}
     dispatch(setField(name, value));
   };
 
