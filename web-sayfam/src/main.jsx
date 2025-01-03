@@ -7,11 +7,11 @@ import store from "./store/store"; // Redux store
 import "./index.css";
 
 createRoot(document.getElementById("root")).render(
+  <BrowserRouter> {/* Routing */}
   <Provider store={store}> {/* Redux store'u sağla */}
     <GlobalProvider> {/* Global context */}
-      <BrowserRouter> {/* Routing */}
         <App />
-      </BrowserRouter>
     </GlobalProvider>
   </Provider>
+  </BrowserRouter>
 );
